@@ -24,6 +24,7 @@ for i, attr in enumerate(attributes):
     class_2 = data[data["species"] == "versicolor"][attr]
     class_3 = data[data["species"] == "virginica"][attr]
 
+    # custom defined split points
     sp1 = (class_1.mean() + class_2.mean()) / 2
     sp2 = (class_2.mean() + class_3.mean()) / 2
     split_points = sorted([sp1, sp2])

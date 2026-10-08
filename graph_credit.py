@@ -24,7 +24,7 @@ for i, attr in enumerate(attributes):
 
     if attr in ["A2", "A11"]:
         # Bin continuous features into 4 equal intervals
-        plot_series = pd.cut(data[attr], bins=4).astype(str)
+        plot_series = pd.cut(data[attr], bins=9)
     else:
         # Keep discrete/categorical features as strings
         plot_series = data[attr].astype(str)
@@ -62,10 +62,7 @@ for i, attr in enumerate(attributes):
     ax.grid(axis="y", linestyle="--", alpha=0.5)
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
-
-    # Rotate x-axis tick labels for A6 or long category lists
-    if attr == "A6" or len(counts.index) > 6:
-        ax.tick_params(axis='x', rotation=45)
+    ax.tick_params(axis='x', rotation=45)
 
 # Place unified legend
 handles, labels = axes[0].get_legend_handles_labels()

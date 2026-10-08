@@ -36,8 +36,8 @@ for attr in ["A2", "A11"]:
 # Categorical custom binary grouping example for CRX A6 attribute
 # Format: ([Group 1 categories], [Group 2 categories])
 custom_splits["A5"] = (["g", "p"], ["gg"])
-custom_splits["A6"] = (["aa", "c", "d", "ff", "i", "j", "k", "m"],
-                       ["cc", "e", "q", "r", "w", "x"])
+custom_splits["A6"] = (["aa", "c", "ff", "cc", "e", "q", "r"],
+                       ["d", "i", "j", "k", "m", "w", "x"])
 
 
 # 4. Helper Functions
