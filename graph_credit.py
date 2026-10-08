@@ -23,7 +23,7 @@ for i, attr in enumerate(attributes):
     ax = axes[i]
 
     if attr in ["A2", "A11"]:
-        # Bin continuous features into 4 equal intervals
+        # Bin continuous features into 9 equal intervals
         plot_series = pd.cut(data[attr], bins=9)
     else:
         # Keep discrete/categorical features as strings
